@@ -21,7 +21,7 @@ local Window = Rayfield:CreateWindow({
         FileName = "RCKey",
         SaveKey = false,
         GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-        Key = "Hello" --Change the key to anything you want
+        Key = "HOILNYFnsefnyhlfyZBNYEOLNUMMLO975" --Change the key to anything you want
     }
 })
 local Tab = Window:CreateTab("Vehicles", 8733342027) -- Title, Image
