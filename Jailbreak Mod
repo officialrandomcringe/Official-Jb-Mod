@@ -1,0 +1,111 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Window = Rayfield:CreateWindow({
+    Name = "Jailbreak Mod", --Title
+    LoadingTitle = "Official Jailbreak Mod",
+    LoadingSubtitle = "by RC",
+    ConfigurationSaving = {
+        Enabled = true,
+        FolderName = nil, -- Create a custom folder for your hub/game
+        FileName = "JbMod"
+    },
+        Discord = {
+            Enabled = false,
+            Invite = "sirius", -- The Discord invite code, do not include discord.gg/
+            RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+        },
+    KeySystem = true, -- Set this to true to use our key system
+    KeySettings = {
+        Title = "Jailbreak Mod",
+        Subtitle = "Key System",
+        Note = "Join the discord (Soon)",
+        FileName = "RCKey",
+        SaveKey = false,
+        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+        Key = "Hello" --Change the key to anything you want
+    }
+})
+local Tab = Window:CreateTab("Vehicles", 8733342027) -- Title, Image
+local Section = Tab:CreateSection("GUI")
+
+local Button = Tab:CreateButton({
+    Name = "SpeedometerColor",
+    Callback = function()
+        game.Players.LocalPlayer.PlayerGui.AppUI.Speedometer.UIStroke.Color = Color3.fromRGB(61, 61, 61)
+        game.Players.LocalPlayer.PlayerGui.AppUI.Speedometer.Bottom.Line0.BackgroundColor3 = Color3.fromRGB(63,63,63)
+        game.Players.LocalPlayer.PlayerGui.AppUI.Speedometer.Bottom.Line1.BackgroundColor3 = Color3.fromRGB(63,63,63)
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "GaragePos",
+    Callback = function()
+        game.Players.LocalPlayer.PlayerGui.AppUI.Garage.Position = UDim2.new(0.525, 0,0.804, 0) 
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "GarageSize",
+    Callback = function()
+        game.Players.LocalPlayer.PlayerGui.AppUI.Garage.Size = UDim2.new(0.486, 0,0.334, 0)
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "GarageAll",
+    Callback = function()
+        game.Players.LocalPlayer.PlayerGui.AppUI.Garage.Size = UDim2.new(0.486, 0,0.334, 0)
+        game.Players.LocalPlayer.PlayerGui.AppUI.Garage.Position = UDim2.new(0.525, 0,0.804, 0) 
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "SpeedometerHide",
+    Callback = function()
+        game.Players.LocalPlayer.PlayerGui.AppUI.Speedometer:Destroy()
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Do Everything",
+    Callback = function()
+        game.Players.LocalPlayer.PlayerGui.AppUI.Garage.Size = UDim2.new(0.486, 0,0.334, 0)
+        game.Players.LocalPlayer.PlayerGui.AppUI.Garage.Position = UDim2.new(0.525, 0,0.804, 0)
+        game.Players.LocalPlayer.PlayerGui.AppUI.Speedometer:Destroy()
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Better Speedometer",
+    Callback = function()
+        game.Players.LocalPlayer.PlayerGui.AppUI.Speedometer.Top.Missiles.Visible = false
+				game.Players.LocalPlayer.PlayerGui.AppUI.Speedometer.Top.MissileBuy.Visible = false
+				game.Players.LocalPlayer.PlayerGui.AppUI.Speedometer.Top.Lock.Visible = false
+				game.Players.LocalPlayer.PlayerGui.AppUI.Speedometer.Top.Plate.Visible = false
+				game.Players.LocalPlayer.PlayerGui.AppUI.Speedometer.Top.Eject.Visible = false
+				game.Players.LocalPlayer.PlayerGui.AppUI.Speedometer.Bottom.Meter.Odometer.Visible = false
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Hide UI",
+    Callback = function()
+        game.Players.LocalPlayer.PlayerGui.AppUI.Enabled = false
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "Hide Show",
+    Callback = function()
+        game.Players.LocalPlayer.PlayerGui.AppUI.Enabled = true
+    end,
+})
+
+local Tab = Window:CreateTab("Credit", 8733343021) -- Title, Image
+local Section = Tab:CreateSection("Misc")
+
+local Button = Tab:CreateButton({
+    Name = "Kill GUI",
+    Callback = function()
+        game.CoreGui.Rayfield:Destroy()
+    end,
+})
